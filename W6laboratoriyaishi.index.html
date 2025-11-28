@@ -1,0 +1,146 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'zbek Milliy Taomlari</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f8f4ef;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #008b45;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #008b45;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        form {
+            margin-top: 30px;
+            background: #f0f8f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background: #008b45;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #006f35;
+        }
+        footer {
+            background-color: #008b45;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>O'zbek Milliy Taomlari</h1>
+    </header>
+    <main>
+        <h2>1. Palov</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Plov_uzbekistan.jpg" alt="O'zbek palovi">
+        <p>
+            Palov — o‘zbek xalqining eng mashhur milliy taomidir. U go‘sht, sabzi, guruch, piyoz va ziravorlardan tayyorlanadi.
+            Har bir viloyatda palov tayyorlashning o‘ziga xos uslubi mavjud. Masalan, Samarqand palovi va Farg‘ona palovi o‘z ta’mi bilan ajralib turadi.
+        </p>
+        <h2>2. Somsa</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Samsa_Uzbekistan.jpg" alt="Somsa">
+        <p>
+            Somsa — tandirda yoki duxovkada pishiriladigan go‘shtli yoki sabzavotli pirogdir. U o‘zining tiniq xamiri va mazali to‘ldirmasi bilan mashhur.
+            Odatda, go‘sht, piyoz va ba’zan kartoshka bilan tayyorlanadi.
+        </p>
+        <h2>3. Lag‘mon</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Lagman_in_Tashkent.jpg" alt="Lag'mon">
+        <p>
+            Lag‘mon — qo‘l bilan cho‘zilgan ugra va maxsus sabzavotli sousdan tayyorlanadigan mazali taom.
+            U nafaqat O‘zbekistonda, balki Markaziy Osiyoning ko‘plab mamlakatlarida ham sevilib iste’mol qilinadi.
+        </p>
+        <!-- Foydalanuvchi fikr formasi -->
+        <form action="#" method="post">
+            <h3>O'z fikringizni qoldiring:</h3>
+            <label for="ism">Ismingiz:</label>
+            <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting" required>
+            <label for="email">Email manzilingiz:</label>
+            <input type="email" id="email" name="email" placeholder="Email manzil" required>
+            <label for="taom">Sevimli taomingizni tanlang:</label>
+            <select id="taom" name="taom">
+                <option value="">-- Tanlang --</option>
+                <option value="palov">Palov</option>
+                <option value="somsa">Somsa</option>
+                <option value="lagmon">Lag'mon</option>
+                <option value="manti">Manti</option>
+                <option value="shurva">Sho‘rva</option>
+            </select>
+            <label for="izoh">Izoh yoki fikrlaringiz:</label>
+            <textarea id="izoh" name="izoh" rows="5" placeholder="O'z fikringizni yozing..."></textarea>
+            <input type="submit" value="Fikrni yuborish">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 O'zbek milliy taomlari sayti. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>
+ 
