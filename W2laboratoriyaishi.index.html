@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BilimUyi Sayti</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#f9f9f9;}
+        header, footer {background:#1f2c3a; color:white; padding:20px; text-align:center;}
+        nav ul {list-style:none; padding:0; margin:0; display:flex; justify-content:center; background:#2c3e50;}
+        nav ul li {margin:0 15px;}
+        nav ul li a {color:white; text-decoration:none; font-weight:bold;}
+        main {padding:20px; max-width:1000px; margin:0 auto;}
+        table {width:100%; border-collapse:collapse; margin:20px 0;}
+        table, th, td {border:1px solid #ccc; padding:10px; text-align:left;}
+        form {margin:20px 0; background:#f0f0f0; padding:15px; border-radius:5px;}
+        form input, form select, form textarea, form button {display:block; margin:10px 0; padding:8px; width:100%;}
+        .kitoblar {display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin-top:20px;}
+        .kitob {border:1px solid #ddd; padding:10px; border-radius:5px; text-align:center; background:white;}
+        .kitob img {max-width:120px; margin-bottom:10px; border-radius:5px;}
+        footer p {margin:5px;}
+        h1,h2,h3,h4 {color:#1f2c3a;}
+        blockquote {border-left:4px solid #1f2c3a; padding-left:15px; color:#555; font-style:italic; background:#eef2f7; margin:20px 0;}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 BilimUyi</h1>
+    <p><i>Xush kelibsiz! </i>Bilim olamiga yangi qadam tashlang</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Bosh sahifa</a></li>
+        <li><a href="#books">Kitoblar</a></li>
+        <li><a href="#register">A’zolik</a></li>
+        <li><a href="#contact">Aloqa</a></li>
+    </ul>
+</nav>
+
+<main>
+  <section id="home">
+      <h2>💻 Elektron Kutubxona - BilimUyi</h2>
+      <hr>
+      <p>
+        <strong>BilimUyi</strong> — bu <em>zamonaviy kutubxona</em>, 
+        unda <b>kitoblar</b>, <u>maqolalar</u> va <mark>multimedia resurslari</mark> jamlangan.  
+        Maqsadimiz — <em>har kim uchun bilimni tez va qulay yetkazish</em>.
+      </p>
+  </section>
+
+  <section id="books">
+      <h3>📖 Mashhur kitoblar</h3>
+      <div class="kitoblar">
+          <div class="kitob">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Great_Gatsby_Cover.jpg/220px-Great_Gatsby_Cover.jpg" alt="Kitob">
+              <h4>Buyuk Gatsby</h4>
+              <p>Amerika adabiyotining mashhur asari, orzular va boylik haqida.</p>
+          </div>
+          <div class="kitob">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/The_Little_Prince_illustration.jpg/220px-The_Little_Prince_illustration.jpg" alt="Kitob">
+              <h4>Kichik Shahzoda</h4>
+              <p>Hayot va sevgining ma’nosini o‘rgatadigan ertak.</p>
+          </div>
+          <div class="kitob">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/War_and_Peace_First_Edition.jpg/220px-War_and_Peace_First_Edition.jpg" alt="Kitob">
+              <h4>Urush va Tinchlik</h4>
+              <p>Inson, tarix va falsafani aks ettiruvchi epik roman.</p>
+          </div>
+      </div>
+  </section>
+
+  <section id="register">
+      <h3>📝 A’zolik uchun ro‘yxatdan o‘ting</h3>
+      <form>
+          <input type="text" placeholder="To‘liq ism" required>
+          <input type="email" placeholder="Email manzilingiz" required>
+          <select>
+              <option>O‘quvchi</option>
+              <option>Talaba</option>
+              <option>O‘qituvchi</option>
+          </select>
+          <textarea rows="4" placeholder="Fikr yoki so‘rov..."></textarea>
+          <button type="submit">Jo‘natish</button>
+      </form>
+  </section>
+
+  <section id="contact">
+      <h4>📬 Aloqa</h4>
+      <p>Email: <a href="mailto:info@bilimuyi.uz">info@bilimuyi.uz</a></p>
+      <p>Manzil: Toshkent shahri, Amir Temur ko‘chasi, 50-uy</p>
+  </section>
+
+  <blockquote>
+    “BilimUyi — bu bilim olamiga tezkor kirish va cheksiz imkoniyatlar eshigi.”
+  </blockquote>
+</main>
+
+<footer>
+    <p>&copy; 2025 BilimUyi</p>
+</footer>
+
+</body>
+</html>
