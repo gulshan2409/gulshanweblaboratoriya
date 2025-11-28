@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'zbek Milliy Taomlari</title>
+    <style>
+        /* ======== ASOSIY USLUBLAR ======== */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fffaf0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007a33;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/16/Uzbek_cuisine.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .menu {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .taomlar-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .taom {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            width: 30%;
+            padding: 1rem;
+        }
+
+        .taom img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .taom h3 {
+            color: #007a33;
+        }
+
+        footer {
+            background-color: #007a33;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* ======== RESPONSIV MEDIA QUERIES ======== */
+
+        /* Planshetlar uchun */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .taomlar-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .taom {
+                width: 80%;
+            }
+        }
+
+        /* Mobil telefonlar uchun */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .taom {
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>O'zbek Milliy Taomlari</h1>
+        <nav>
+            <ul>
+                <li><a href="#bosh">Bosh sahifa</a></li>
+                <li><a href="#taomlar">Taomlar</a></li>
+                <li><a href="#aloqa">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="bosh" class="hero">
+        <h2>Asl o‘zbek taomlarining betakror lazzatini his eting!</h2>
+        <p>Palov, somsa, lag‘mon, manti — xalqimizning qadimiy taomlari siz uchun!</p>
+    </section>
+
+    <section id="taomlar" class="menu">
+        <h2>Eng mashhur taomlar</h2>
+        <div class="taomlar-container">
+            <div class="taom">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Plov_Uzbekistan.jpg" alt="Palov">
+                <h3>Palov</h3>
+                <p>Guruch, sabzi va go‘shtdan tayyorlanadigan milliy taomimiz.</p>
+            </div>
+            <div class="taom">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Samsa_01.jpg" alt="Somsa">
+                <h3>Somsa</h3>
+                <p>Go‘shtli yoki sabzavotli tandir pishiriq — milliy nonushta uchun zo‘r tanlov.</p>
+            </div>
+            <div class="taom">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Lagman.jpg" alt="Lag'mon">
+                <h3>Lag'mon</h3>
+                <p>Qo‘l bilan cho‘zilgan lapsha va sabzavotli sosdan tayyorlangan noodatiy taom.</p>
+            </div>
+        </div>
+    </section>
+    <footer id="aloqa">
+        <p>📞 Biz bilan bog‘laning: <a href="mailto:info@taom.uz">info@taom.uz</a></p>
+        <p>&copy; 2025 O'zbek Milliy Taomlari. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>
