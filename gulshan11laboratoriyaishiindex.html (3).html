@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+ <title>O‘zbek Milliy Taomlari</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ background: #f7f3e9;
+ margin: 0;
+ padding: 20px;
+ }
+
+ h1 {
+ text-align: center;
+ color: #8b0000;
+ }
+
+ #container {
+ max-width: 700px;
+ margin: auto;
+ padding: 20px;
+ background: white;
+ border-radius: 10px;
+ box-shadow: 0 0 10px #ccc;
+ }
+
+ .taom {
+ padding: 15px;
+ margin: 10px 0;
+background: #fff0e1;
+ border-left: 5px solid #8b0000;
+ border-radius: 6px;
+}
+
+ button {
+ margin-top: 10px;
+ padding: 8px 15px;
+ cursor: pointer;
+ border: none;
+ background: #8b0000;
+ color: rgb(255, 255, 255);
+ border-radius: 5px;
+ }
+
+ button:hover {
+ background: #a30000;
+ }
+
+input {
+ padding: 8px;
+ width: 95%;
+margin-top: 10px;
+ }
+</style>
+</head>
+<body>
+
+<h1>O‘zbek Milliy Taomlari</h1>
+
+<div id="container">
+ <!-- Boshlang‘ich taomlar -->
+<div class="taom">Plov</div>
+ <div class="taom">Shashlik</div>
+ <div class="taom">Lag‘mon</div>
+
+ <h3>Yangi taom qo‘shish:</h3>
+ <input type="text" id="newFood" placeholder="Taom nomini kiriting...">
+ <button onclick="addFood()">Qo‘shish</button>
+
+ <h3>Mavjud taomni o‘zgartirish:</h3>
+  <input type="text" id="oldFood" placeholder="O‘zgartiriladigan taom nomi">
+ <input type="text" id="newName" placeholder="Yangi nom">
+ <button onclick="editFood()">O‘zgartirish</button>
+
+ <h3>Taomni o‘chirish:</h3>
+ <input type="text" id="deleteFood" placeholder="O‘chiriladigan taom nomi">
+ <button onclick="deleteFood()">O‘chirish</button>
+</div>
+
+<script>
+ // Taom qo‘shish
+ function addFood() {
+ let foodName = document.getElementById("newFood").value.trim();
+ if (foodName === "") {
+ alert("Taom nomini kiriting!");
+ return;
+ }
+
+ // Yangi element yaratish (DOM createElement)
+ let newDiv = document.createElement("div");
+ newDiv.className = "taom";
+ newDiv.textContent = foodName;
+
+ document.getElementById("container").appendChild(newDiv);
+ document.getElementById("newFood").value = "";
+ }
+
+ // Taom nomini o‘zgartirish
+ function editFood() {
+ let oldName = document.getElementById("oldFood").value.trim();
+ let newName = document.getElementById("newName").value.trim();
+
+ if (oldName === "" || newName === "") {
+ alert("Iltimos ikki maydonni ham to‘ldiring!");
+ return;
+ }
+
+ let items = document.getElementsByClassName("taom");
+ let found = false;
+
+ for (let item of items) {
+ if (item.textContent.toLowerCase() === oldName.toLowerCase()) {
+ item.textContent = newName; // DOM textContent o‘zgartirish
+ found = true;
+ break;
+ }
+ }
+
+ if (!found) alert("Bunday taom topilmadi!");
+
+ document.getElementById("oldFood").value = "";
+ document.getElementById("newName").value = "";
+ }
+
+// Taomni o‘chirish
+ function deleteFood() {
+ let name = document.getElementById("deleteFood").value.trim();
+ let items = document.getElementsByClassName("taom");
+let found = false;
+
+ for (let item of items) {
+ if (item.textContent.toLowerCase() === name.toLowerCase()) {
+ item.remove(); // DOM remove()
+ found = true;
+break;
+ }
+ }
+
+if (!found) alert("Bunday taom topilmadi!");
+
+ document.getElementById("deleteFood").value = "";
+ }
+</script>
+
+</body>
+</html>
