@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+ <meta charset="UTF-8">
+<title>O'zbek milliy taomlari</title>
+
+ <style>
+body{
+ margin:0;
+ font-family: Arial, sans-serif;
+ background:#f6efe2;
+ }
+
+/* ===== Sarlavha ===== */
+ header{
+ background:#7a0000;
+ color:white;
+ padding:25px;
+ text-align:center;
+ animation: titleGlow 2s infinite alternate;
+ }
+
+ @keyframes titleGlow{
+ from{letter-spacing:2px;}
+ to{letter-spacing:6px;}
+ }
+ /* ===== Asosiy qism ===== */
+ .container{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:25px;
+ padding:40px;
+}
+
+ /* ===== Kartalar ===== */
+ .card{
+ width:260px;
+ background:white;
+ border-radius:15px;
+ overflow:hidden;
+ transition: 0.5s;
+ box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+ /* Transition effekti */
+ .card:hover{
+ transform: scale(1.08);
+ box-shadow:0 10px 25px rgba(0,0,0,0.4);
+ }
+
+ .card img{
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ }
+
+ .card-content{
+padding:15px;
+text-align:center;
+ }
+
+ .card h3{
+ color:#7a0000;
+}
+
+ /* ===== Tugma ===== */
+ .btn{
+ display:inline-block;
+padding:8px 20px;
+ background:#7a0000;
+ color:white;
+ text-decoration:none;
+ border-radius:20px;
+ margin-top:10px;
+ transition:0.5s;
+ }
+
+ .btn:hover{
+ background:#b22222;
+ transform: translateY(-5px);
+ }
+
+/* ===== Harakatlanuvchi matn ===== */
+ .moving-text{
+ text-align:center;
+ font-size:22px;
+ color:green;
+ margin-top:15px;
+ animation: move 6s infinite linear;
+ }
+
+ @keyframes move{
+ 0%{transform:translateX(-150px)}
+50%{transform:translateX(150px)}
+ 100%{transform:translateX(-150px)}
+ }
+
+ footer{
+ text-align:center;
+ background:#7a0000;
+ color:white;
+ padding:12px;
+ margin-top:20px;
+ }
+
+ </style>
+</head>
+
+<body>
+
+<header>
+<h1>O'zbek Milliy Taomlari</h1>
+ <p>CSS Transition va Animatsiya asosida yaratilgan sahifa</p>
+</header>
+
+<div class="moving-text">
+ 🍽 Milliy taomlarimiz – millatimiz faxri!
+</div>
+
+<div class="container">
+
+ <!-- Osh -->
+ <div class="card">
+ <img src="https://i.imgur.com/6RL9FJk.jpg">
+ <div class="card-content">
+ <h3>Osh (Palov)</h3>
+ <p>Guruch, sabzi va go‘shtdan tayyorlanadigan eng mashhur o‘zbek taomi.</p>
+ <a href="#" class="btn">Batafsil</a>
+ </div>
+ </div>
+
+ <!-- Somsa -->
+<div class="card">
+ <img src="https://i.imgur.com/7dEK4N6.jpg">
+ <div class="card-content">
+ <h3>Somsa</h3>
+ <p>Qarsildoq xamir va go‘shtli ichlik bilan pishiriladi.</p>
+<a href="#" class="btn">Batafsil</a>
+ </div>
+ </div>
+
+ <!-- Lag'mon -->
+ <div class="card">
+ <img src="https://i.imgur.com/2q3Z2kY.jpg">
+<div class="card-content">
+ <h3>Lag‘mon</h3>
+<p>Maxsus cho‘zilgan makaron va sousli taom.</p>
+ <a href="#" class="btn">Batafsil</a>
+ </div>
+ </div>
+
+ <!-- Shashlik -->
+ <div class="card">
+ <img src="https://i.imgur.com/V0GQ2zK.jpg">
+ <div class="card-content">
+ <h3>Shashlik</h3>
+ <p>Ko‘mirda qovurilgan mazali go‘sht bo‘laklari.</p>
+<a href="#" class="btn">Batafsil</a>
+</div>
+ </div>
+
+</div>
+
+<footer>
+     <p>© 2025 | CSS Transition & Animation – O‘zbek milliy taomlari</p>
+</footer>
+
+</body>
+</html>
