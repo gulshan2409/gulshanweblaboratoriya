@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>O‘zbek Milliy Taomlari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f2e9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #b8860b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #b8860b;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #d4a017;
+        }
+        .result {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>O‘zbek Milliy Taomlari</h1>
+    <p>JavaScriptning oddiy funksiyalari va o‘zgaruvchilaridan foydalanilgan kichik web sahifa</p>
+</header>
+
+<div class="content">
+    <h2>Taom haqida ma'lumot olish</h2>
+
+    <p>Quyidagi tugmani bosing va tasodifiy o‘zbek milliy taomi haqida ma’lumot oling:</p>
+
+    <button onclick="taomChiqar()">Taomni ko‘rish</button>
+
+    <div id="natija" class="result"></div>
+</div>
+
+<script>
+    // O'zgaruvchilar — taomlarning nomlari va tariflari
+    let taomlar = [
+        {
+            nom: "Palov",
+            tarif: "O‘zbek oshxonasi ramzi. Go‘sht, sabzi va guruchdan tayyorlanadi."
+        },
+        {
+            nom: "Somsa",
+            tarif: "Do‘lma yoki tovuq go‘shtidan tayyorlangan qovurma xamir taomi."
+        },
+        {
+            nom: "Lag'mon",
+            tarif: "Qo‘l tortma ugra va sabzavotli go‘shtli qayla asosida tayyorlanadi."
+        },
+        {
+            nom: "Shashlik",
+            tarif: "Ko‘mirda pishirilgan go‘shtdan tayyorlanadigan mashhur taom."
+        },
+        {
+            nom: "Manti",
+            tarif: "Go‘shtli bug‘da pishiriladigan yirik chuchvara."
+        }
+    ];
+
+    // Oddiy funksiya — tasodifiy taom chiqaradi
+    function taomChiqar() {
+        let indeks = Math.floor(Math.random() * taomlar.length);
+        let tanlangan = taomlar[indeks];
+
+        document.getElementById("natija").innerHTML =
+            "<h3>" + tanlangan.nom + "</h3>" +
+            "<p>" + tanlangan.tarif + "</p>";
+    }
+</script>
+
+</body>
+</html>
