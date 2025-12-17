@@ -1,0 +1,240 @@
+  <!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>O‘zbek Milliy Taomlari</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f1e9;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1600x900/?plov') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.3rem; }
+    nav {
+      background: #8B4513;
+      padding: 15px 0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 0 20px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #FFD700; }
+
+    section { padding: 60px 20px; text-align: center; }
+    h2 { font-size: 2.5rem; margin-bottom: 30px; color: #8B4513; }
+    .taomlar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h3 { padding: 15px; font-size: 1.6rem; color: #8B4513; }
+    .card p { padding: 0 15px 20px; }
+    #aloqa {
+      background: #fff8f0;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #8B4513;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background: #8B4513;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    button:hover { background: #A0522D; }
+
+    .error { color: red; font-size: 0.9rem; display: none; }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>O‘zbek Milliy Taomlari</h1>
+    <p>Dunyo tan olgan mazali va sermahsul taomlarimiz bilan tanishing</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#bosh">Bosh sahifa</a></li>
+      <li><a href="#taomlar">Taomlar</a></li>
+      <li><a href="#aloqa">Aloqa</a></li>
+    </ul>
+  </nav>
+  <section id="bosh">
+    <h2>Xush kelibsiz!</h2>
+    <p>O‘zbek oshxonasi – ming yillik tarixga ega, mehmondo‘stlik va saxiylik ramzi. Bu yerda eng mashhur milliy taomlarimiz haqida ma’lumot beramiz.</p>
+  </section>
+  <section id="taomlar">
+    <h2>Eng mashhur taomlar</h2>
+    <div class="taomlar">
+
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?plov" alt="Osh">
+        <h3>Osh (Palov)</h3>
+        <p>O‘zbek xalqining eng muhim va eng sevimli taomi. Guruch, go‘sht, sabzi, piyoz va ziravorlardan tayyorlanadi.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?manti" alt="Manti">
+        <h3>Manti</h3>
+        <p>Qatiq yoki smetana bilan iste’mol qilinadigan xamir ichiga qiyma solib pishiriladigan taom.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?shashlik" alt="Shashlik">
+        <h3>Shashlik</h3>
+        <p>Qo‘zi yoki mol go‘shtidan tayyorlanadigan ko‘mirda qovurilgan shish kabob.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?lagman" alt="Lag‘mon">
+        <h3>Lag‘mon</h3>
+        <p>Uyg‘ur va duxoba taomi bo‘lib, qo‘l bilan yasalgan uzun makaron va go‘shtli sousdan iborat.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?samsa" alt="Somsa">
+        <h3>Somsa</h3>
+        <p>Tandirda pishiriladigan qatlamali xamir ichiga go‘sht, kartoshka yoki qovoq solib pishiriladi.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/400x300/?non" alt="Non">
+        <h3>O‘zbek noni</h3>
+        <p>Tandirda pishiriladigan turli shakldagi (obi-non, patir, shirma non) milliy nonlar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="aloqa">
+    <h2>Biz bilan bog‘laning</h2>
+    <form id="contactForm" novalidate>
+      <label for="ism">Ismingiz *</label>
+      <input type="text" id="ism" name="ism" required />
+      <span class="error" id="ismError">Iltimos, ismingizni kiriting (kamida 2 harf)</span>
+      <label for="tel">Telefon raqamingiz *</label>
+      <input type="tel" id="tel" name="tel" placeholder="+998 __ ___ __ __" required />
+      <span class="error" id="telError">To‘g‘ri telefon raqam kiriting (masalan: +998901234567)</span>
+      <label for="email">Email (ixtiyoriy)</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="xabar">Xabar *</label>
+      <textarea id="xabar" rows="5" required></textarea>
+      <span class="error" id="xabarError">Xabar maydonini to‘ldiring</span>
+      <button type="submit">Yuborish</button>
+      <p id="success" style="color:green; margin-top:15px; display:none;">Xabar muvaffaqiyatli yuborildi!</p>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 O‘zbek Milliy Taomlari. Barcha huquqlar himoyalangan.</p>
+  </footer>
+  <script>
+    const form = document.getElementById('contactForm');
+    const ismInput = document.getElementById('ism');
+    const telInput = document.getElementById('tel');
+    const emailInput = document.getElementById('email');
+    const xabarInput = document.getElementById('xabar');
+    const successMsg = document.getElementById('success');
+    // Xato xabarlarini ko‘rsatish funksiyasi
+    function showError(input, errorElement) {
+      errorElement.style.display = 'block';
+      input.style.borderColor = 'red';
+    }
+    function hideError(input, errorElement) {
+      errorElement.style.display = 'none';
+      input.style.borderColor = '#8B4513';
+    }
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+      // Ism tekshiruvi
+      if (ismInput.value.trim().length < 2) {
+        showError(ismInput, document.getElementById('ismError'));
+        valid = false;
+      } else {
+        hideError(ismInput, document.getElementById('ismError'));
+      }
+      // Telefon tekshiruvi (O‘zbekiston formatlari)
+      const phoneRegex = /^\+998\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$|^\+998\d{9}$/;
+      if (!phoneRegex.test(telInput.value.trim())) {
+        showError(telInput, document.getElementById('telError'));
+        valid = false;
+      } else {
+        hideError(telInput, document.getElementById('telError'));
+      }
+      // Xabar tekshiruvi
+      if (xabarInput.value.trim().length < 10) {
+        showError(xabarInput, document.getElementById('xabarError'));
+        valid = false;
+      } else {
+        hideError(xabarInput, document.getElementById('xabarError'));
+      }
+      if (valid) {
+        successMsg.style.display = 'block';
+        form.reset();
+        setTimeout(() => successMsg.style.display = 'none', 5000);
+        // Bu yerda haqiqiy serverga yuborish kodi bo‘lishi mumkin edi
+      }
+    });
+    // Real-time tekshirish (ixtiyoriy)
+    ismInput.addEventListener('input', () => {
+      if (ismInput.value.trim().length >= 2) hideError(ismInput, document.getElementById('ismError'));
+    });
+    telInput.addEventListener('input', () => {
+      if (/^\+998/.test(telInput.value)) hideError(telInput, document.getElementById('telError'));
+    });
+  </script>
+</body>
+</html>
+
