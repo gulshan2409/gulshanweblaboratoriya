@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O‘zbek milliy taomlari – JSON misol</title>
+    <style>
+        body {
+            background-color: #fffaf0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 30px 0 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            color: #f5deb3;
+            margin-top: 5px;
+        }
+
+        nav {
+            background-color: #a0522d;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 95%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff0e6;
+        }
+
+        input {
+            padding: 8px;
+            width: 50%;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>O‘zbek milliy taomlari</h1>
+        <p class="welcome-text">JSON formatda ma’lumotlarni olish va filtrlash</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Bosh sahifa</a>
+        <a href="tarix.html">Taomlar tarixi</a>
+        <a href="galereya.html">Rasm galereyasi</a>
+    </nav>
+
+    <h2>Milliy taomlar jadvali (JSONdan olingan)</h2>
+    <input id="searchInput" type="text" placeholder="Taom nomi yoki hudud bo‘yicha qidirish...">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Taom nomi</th>
+                <th>Hudud</th>
+                <th>Asosiy masalliqlar</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <!-- JSON ma’lumot shu yerga chiqadi -->
+        </tbody>
+    </table>
+
+    <script>
+        // O‘zbek milliy taomlari JSON ma'lumotlari
+        const foods = [
+            {"nomi":"Osh (Palov)","hudud":"Butun O‘zbekiston","masalliq":"Guruch, go‘sht, sabzi"},
+            {"nomi":"Somsa","hudud":"Samarqand","masalliq":"Xamir, go‘sht, piyoz"},
+            {"nomi":"Manti","hudud":"Toshkent","masalliq":"Xamir, qiyma"},
+            {"nomi":"Lag‘mon","hudud":"Farg‘ona","masalliq":"Xamir, sabzavot"},
+            {"nomi":"Norin","hudud":"Xorazm","masalliq":"Go‘sht, xamir"},
+            {"nomi":"Shurva","hudud":"Qashqadaryo","masalliq":"Go‘sht, kartoshka"},
+            {"nomi":"Chuchvara","hudud":"Buxoro","masalliq":"Xamir, qiyma"},
+            {"nomi":"Mastava","hudud":"Toshkent","masalliq":"Guruch, sabzavot"},
+            {"nomi":"Tandir kabob","hudud":"Surxondaryo","masalliq":"Qo‘y go‘shti"},
+            {"nomi":"Qovurma lag‘mon","hudud":"Andijon","masalliq":"Go‘sht, xamir"},
+            {"nomi":"Shashlik","hudud":"Namangan","masalliq":"Go‘sht, piyoz"},
+            {"nomi":"Hasip","hudud":"Xorazm","masalliq":"Go‘sht, guruch"},
+            {"nomi":"Dimlama","hudud":"Farg‘ona","masalliq":"Go‘sht, sabzavot"},
+            {"nomi":"Qozon kabob","hudud":"Jizzax","masalliq":"Go‘sht, kartoshka"},
+            {"nomi":"Tuxum barak","hudud":"Xorazm","masalliq":"Tuxum, xamir"}
+        ];
+
+        // Jadvalga ma’lumotlarni qo‘shish
+        const tableBody = document.getElementById("myTable");
+        foods.forEach(food => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${food.nomi}</td>
+                <td>${food.hudud}</td>
+                <td>${food.masalliq}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        // Qidiruv funksiyasi
+        document.getElementById("searchInput").addEventListener("keyup", function () {
+            const value = this.value.toLowerCase();
+            const rows = tableBody.getElementsByTagName("tr");
+
+            Array.from(rows).forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(value) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
